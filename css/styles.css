@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* start of phones */
+body {
+    margin: 0;
+    background-image: url("../images/tstoaa_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    
+    /* Re-adjust for higher resolutions */
+    background-position-x: 20%;
+    background-position-y: -10vw;
+}
+
+.title {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    color: #F2F3F3;
+    position: relative;
+    
+    /* Re-adjust for higher resolutions ?????? */
+    top: 50vh;
+}
+
+#title1 {
+    /* Re-adjust for higher resolutions */
+    font-size: 220%;
+    font-weight: 900;
+}
+
+#title2 {
+    /* Re-adjust for higher resolutions */
+    font-size: 200%;
+}
+
+.container{
+    background: #FFFFFF;
+    height: auto;
+    width: 100%;
+    
+    /* Re-adjust for higher resolutions */
+    margin-top: 60vh;
+    
+    /* Create flexbox | The size of the container is always 100%, so it will be only 1 row, starting at the top (flex-start) */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0em;
+    
+    /* Re-adjust for higher resolutions */
+    font-size: 14px;
+    
+}
+
+.cont1, .cont2, .cont3, .cont4 {
+    /* Re-adjust for higher resolutions | Give each div it's own space between each other */
+    padding-bottom: 15vh;
+}
+
+.editorial {
+    padding-bottom: 10vh;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Re-adjust for higher resolutions */
+    max-width: 80%;
+}
+.imgp { /*Porfolio Images*/
+    border-radius: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Re-adjust for higher resolutions */
+    width: 250px;
+    padding: 30px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.imgp:hover { /*Porfolio Images*/
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Re-adjust for higher resolutions */
+    width: 80%;
+}
+
+/* ----------------------Nav Bar */
+header {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #309EF5;
+    text-align: center;    
+    position: fixed;
+    width: 100%;
+    
+    /* Re-adjust for higher resolutions */
+    margin-top: -5vh;
+    
+    z-index: 999; 
+    /* High index so it's always ontop */
+}
+.navtext {
+    list-style-type: none;
+    margin-right: 20vh;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.5em; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #309EF5;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    
+}
+.nav-toggle-label span
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Make the list content spaced to the left and separated */
+nav li {
+    margin-bottom: 1em;
+    margin-left: -1.5em;
+}
+/* Stylize the text from the a tags to have no obnoxious outline and more uniformed */
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+/* Create a simple mouse-over hover effect */
+nav a:hover {
+    color: #FFFFFF;
+    transition: color 200ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.logoimg {
+    margin: 0 auto;
+    /* Re-adjust for higher resolutions */
+    width: 30%;
+}
+/* Nav Bar End ----------------------*/
+
+@media screen and (min-width: 479px) {
+/* start of desktop monitors */
+
+}
+
+@media screen and (min-width: 768px) {
+/* start of tablets */
+    body {
+        /* Re-adjust for higher resolutions */
+        background-position-x: 80%;
+        background-position-y: 0vw;
+    }
+    #title1 {
+        /* Re-adjust for higher resolutions */
+        font-size: 320%;
+        font-weight: 900;
+    }
+    #title2 {
+        /* Re-adjust for higher resolutions */
+        font-size: 300%;
+    }
+    .container{
+        /* Re-adjust for higher resolutions */
+        margin-top: 60vh;
+    }
+    .content {
+        /* Re-adjust for higher resolutions */
+        font-size: 16px;
+    }
+    .cont1, .cont2, .cont3, .cont4 {
+        /* Re-adjust for higher resolutions | Give each div it's own space between each other */
+        padding-bottom: 10vh;
+    }
+    p {
+        /* Re-adjust for higher resolutions */
+        max-width: 60%;
+    }
+        .img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* Re-adjust for higher resolutions */
+        width: 60%;
+    }
+        .imgp{ /*Porfolio Images*/
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 0;
+        /* Re-adjust for higher resolutions */
+        width: 250px;
+        padding: 30px;
+    }
+        .logoimg {
+        margin: 0 auto;
+        /* Re-adjust for higher resolutions */
+        width: 30%;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+/* start of desktop monitors */
+   body {
+        /* Re-adjust for higher resolutions */
+        background-position-x: 80%;
+        background-position-y: 0vw;
+    } 
+    .content {
+        /* Re-adjust for higher resolutions */
+        font-size: 18px;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(50%, 1fr) 5fr;
+    }
+    .logo {
+        grid-column: 2 / 3;
+    }
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    nav a{
+        opacity: 1;
+    }
+    .logoimg {
+    width: 30%;
+    margin-left: -50%;
+    margin-top: 15px;
+    }
+
+}
